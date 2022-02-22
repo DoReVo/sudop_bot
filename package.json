@@ -1,0 +1,23 @@
+{
+  "name": "sudop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "fastify": "^3.27.2",
+    "fastify-env": "^2.1.1",
+    "fastify-redis": "^4.3.3",
+    "fastq": "^1.13.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^7.5.1"
+  }
+}
