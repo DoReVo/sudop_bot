@@ -10,7 +10,7 @@ import { sendMessage } from "./src/queue/SendMessage.js";
 
 const server = await fastify({
   logger: {
-    prettyPrint: false,
+    prettyPrint: true,
   },
   disableRequestLogging: true,
 });

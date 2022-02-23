@@ -1,0 +1,24 @@
+[Unit]
+Description=Sudop Bot
+After=network.target
+Wants=redis.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/node </projects/myapp/index.js>
+WorkingDirectory=</projects/myapp>
+
+User=sudop_nodejs
+Group=sudop_nodejs
+
+EnvironmentFile=</path/to/env/file>
+
+# StandardInput=null
+# StandardOutput=append:</path/to/log>
+# StandardError=append:</path/to/log>
+
+Restart=always
+RestartSec=500ms
+
+[Install]
+WantedBy=multi-user.target
