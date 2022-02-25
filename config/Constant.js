@@ -9,8 +9,6 @@ List of commands:
 
 /deletetask (taskname) - Delete existing task with the name (taskname)
 
-/ticktask (taskname) - Mark a task with name (taskname) as completed/incomplete
-
 /listtask - List all your completed and incomplete tasks`,
 };
 
