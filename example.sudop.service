@@ -5,17 +5,13 @@ Wants=redis.service
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/node </projects/myapp/index.js>
-WorkingDirectory=</projects/myapp>
+ExecStart=/bin/sh -c "/usr/bin/node server.js | pino-stackdriver -n sudop_bot --project <project-id> --credentials ./stackdriver-creds.json"
+WorkingDirectory=<path/to/repository>
 
 User=sudop_nodejs
 Group=sudop_nodejs
 
-EnvironmentFile=</path/to/env/file>
-
-# StandardInput=null
-# StandardOutput=append:</path/to/log>
-# StandardError=append:</path/to/log>
+EnvironmentFile=<path/to/repository/.env>
 
 Restart=always
 RestartSec=500ms
